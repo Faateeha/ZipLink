@@ -7,7 +7,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 w-full dark:bg-gray-900  shadow-md z-50">
+    <nav className=" w-full dark:bg-gray-900  shadow-md">
       <div className="max-w-6xl mx-4 lg:mx-8 px-2 py-4 flex justify-between items-center">
         {/* Left Section: Logo & Links */}
         <div className="flex items-center space-x-4">
@@ -22,7 +22,7 @@ const Navbar = () => {
                   to={section.toLowerCase()}
                   smooth={true}
                   duration={500}
-                  className="text-gray-700 dark:text-white cursor-pointer hover:text-green-600 lg:text-lg"
+                  className=" dark:text-white cursor-pointer hover:text-green-600 lg:text-lg"
                 >
                   {section}
                 </ScrollLink>
@@ -47,7 +47,7 @@ const Navbar = () => {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden text-gray-700 dark:text-white text-2xl"
+          className="md:hidden dark:text-white text-2xl"
         >
           {isOpen ? <FiX /> : <FiMenu />}
         </button>
@@ -57,7 +57,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-white dark:bg-gray-900 py-4 space-y-4 text-center">
+        <div className="md:hidden dark:bg-gray-900 py-4 space-y-4 text-center">
           {/* Mobile Links */}
           {["Features", "Pricing", "Contact"].map((section) => (
             <ScrollLink

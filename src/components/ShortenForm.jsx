@@ -54,8 +54,8 @@ const ShortenForm = () => {
     };
 
     return (
-        <div className="max-w-md mx-auto mt-[5rem] p-6 rounded-lg shadow-md">
-            <h2 className="text-2xl font-semibold text-center mb-4">URL Shortener</h2>
+        <div className="max-w-lg mx-auto   rounded-lg ">
+            
             <form onSubmit={handleShorten} className="flex flex-col space-y-4">
                 <input type="url" placeholder="Enter URL..." className="p-2 border border-green-300 rounded-md text-gray-900 dark:text-white bg-white dark:bg-gray-800 placeholder-gray-500 dark:placeholder-gray-400" value={url} onChange={(e) => setUrl(e.target.value)} required/>
 
@@ -79,9 +79,9 @@ const ShortenForm = () => {
                 <div className="mt-6">
                     <h3 className="text-lg font-semibold mb-2">Shortened Links History</h3>
                     <ul className="space-y-2">{history.map((link, index) => (
-                        <li key={index} className="p-2 bg-gray-100 rounded-md flex justify-between space-x-2">
+                        <li key={index} className="p-2 rounded-md flex justify-between space-x-2">
                             <div className="flex-1 min-w-0">
-                                <p className="text-sm text-gray-700 truncate">Original: {link.original}</p>
+                                <p className="text-sm truncate">Original: {link.original}</p>
                                 <a href={link.short} traget="_blankk" rel="noopener noreferrer" className="text-blue-600 underline">{link.short}</a>
                             </div>
                             <CopyToClipboard text={link.short}>
