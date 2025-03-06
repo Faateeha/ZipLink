@@ -54,12 +54,12 @@ const ShortenForm = () => {
     };
 
     return (
-        <div className="max-w-md mx-auto p-6 rounded-lg shadow-md">
+        <div className="max-w-md mx-auto mt-[5rem] p-6 rounded-lg shadow-md">
             <h2 className="text-2xl font-semibold text-center mb-4">URL Shortener</h2>
             <form onSubmit={handleShorten} className="flex flex-col space-y-4">
-                <input type="url" placeholder="Enter URL..." className="p-2 border border-gray-300 rounded-md" value={url} onChange={(e) => setUrl(e.target.value)} required/>
+                <input type="url" placeholder="Enter URL..." className="p-2 border border-green-300 rounded-md text-gray-900 dark:text-white bg-white dark:bg-gray-800 placeholder-gray-500 dark:placeholder-gray-400" value={url} onChange={(e) => setUrl(e.target.value)} required/>
 
-                <button type="submit" className="bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 transition" disabled={loading}>
+                <button type="submit" className="bg-green-500 text-white py-2 rounded-md hover:bg-green-600 transition" disabled={loading}>
                     {loading ? "Shortening" : "Shorten URL"}
                 </button>
             </form>

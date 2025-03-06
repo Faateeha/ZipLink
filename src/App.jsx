@@ -1,6 +1,7 @@
 import ShortenForm from "./components/ShortenForm"
 import { DarkModeProvider } from "./context/DarkmodeContext"
 import DarkMode from "./components/DarkMode"
+import Navbar from "./components/Navbar"
 function App() {
   
 
@@ -8,7 +9,7 @@ function App() {
     <>
     <DarkModeProvider>
       <div className="">
-        <DarkMode />
+        <Navbar />
     <ShortenForm />
     </div>
     </DarkModeProvider>
